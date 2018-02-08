@@ -45,4 +45,16 @@ class AdminController extends Controller
             return redirect()->route('posts.show', ['id' =>$info->id]);
         }
     }
+
+    public function postEditForm($post_id)
+    {
+        $post=Post::where('id',$post_id)->first();
+        return view('admin.edit_posts',compact('post'));
+    }
+
+//    public function postsDelete($post_id)
+//    {
+//        Post::where('id',$post_id)->delete();
+//        return redirect()->route('posts.show');
+//    }
 }
