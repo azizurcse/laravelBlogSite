@@ -68,7 +68,19 @@
     </div>
 </nav>
     <div class="container">
-        @yield('content')
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="{{route('admin.posts.all')}}">Show all post</a></li>
+                    <li class="list-group-item"><a href="{{route('admin.posts.add')}}">add post</a></li>
+                    <li class="list-group-item"><a href="">show comments</a></li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                @yield('content')
+            </div>
+        </div>
+
     </div>
     <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>

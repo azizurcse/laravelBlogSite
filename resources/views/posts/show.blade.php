@@ -4,6 +4,7 @@
     <h1>Post details</h1>
     <p>{{$post_details->title}}</p>
     <p>{{$post_details->description}}</p>
+    <img src="{{$post_details->cover_image}}" alt="">
     @if (Auth::check())
     {!! Form::open(['url'=>'comments','class'=>'form-horizontal']) !!}
         <div class="form-group">
